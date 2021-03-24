@@ -7,3 +7,35 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+#button1 {
+  height: 25%;
+  width: 25%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+#button2 {
+  height: 25%;
+  width: 25%;
+  position: relative;
+  top: 0%;
+  left: 50%;
+}
+
+#button3 {
+  height: 25%;
+  width: 25%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+
+#button4 {
+  height: 25%; 
+  width: 25%;
+  position: relative;
+  top: 50%;
+  left: 0%;
+}

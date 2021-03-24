@@ -26,3 +26,7 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function loadStudent() {
+    window.location.href = "student.html";
+}
