@@ -1,28 +1,45 @@
-// Copyright 2020 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function createQuestions(){
+  console.log(document.getElementById("idNumQue").value)
+  var numberQuestions = document.getElementById("idNumQue").value;
+  var elementForm = document.createElement("form");
+  elementForm.setAttribute("id","idForm");
+  var elementContainer = document.getElementById("idQuestions");
+  
+  for(let i = 0; i < numberQuestions; i++){
+    var inputQuestion = document.createElement("INPUT");
+    inputQuestion.setAttribute("type", "text");
+    inputQuestion.setAttribute("name", "question");
+    var h2ElementQuestion = document.createElement("h2");
+    h2ElementQuestion.appendChild(document.createTextNode(`Please write question number ${i+1}`))
+    elementForm.appendChild(h2ElementQuestion);
+    elementForm.appendChild(inputQuestion);
+    for(let j = 0 ; j < 4; j++){
+      var pElementAnswer = document.createElement("p");
+      if(j == 0){
+        pElementAnswer.appendChild(document.createTextNode(`Plese write the correct answer`));
+      }else{
+        pElementAnswer.appendChild(document.createTextNode(`Plese write an incorrect answer`));
+      }
+      elementForm.appendChild(pElementAnswer);
+      var inputAnswer = document.createElement("input");
+      inputAnswer.setAttribute("type", "text");
+      inputAnswer.setAttribute("name", "answer");
+      elementForm.appendChild(inputAnswer);
+    }
+  }
+  elementContainer.appendChild(elementForm);
+  var button = document.createElement('input');
+  button.setAttribute('type', 'submit');
+  elementContainer.appendChild(button);
+  button.onclick = () => {
+    var inputs = document.getElementById("idForm").elements;
+    for(let i = 0 ; i < 5; i++){
+      console.log(inputs[i].value);
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    }
+  }
+  
+  
+  
 }
