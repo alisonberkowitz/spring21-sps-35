@@ -1,9 +1,61 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+* {
+  padding: 0px;
+  margin: 0px;
 }
 
-#greeting-container {
-  margin-top: 20px;
+body {
+  background: -webkit-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -moz-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -ms-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -o-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  font-family: cursive;
+  height: 800px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 800px;
+}
+
+.info-mainTitle {
+  color: white;
+  font-size: 60px;
+}
+
+.info-pinSection {
+  padding-bottom: 100px;
+  border-radius: 5px;
+  align-items: center;
+  height: 20px;
+}
+
+.pinSection-PinTitle {
+  font-size: 20px;
+  border: solid;
+  width: 100px;
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.pinSection-Pin {
+  font-size: 20px;
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  height: 60px;
+  width: 350px;
+  align-content: center;
+  font-size: 40px;
+  padding-left: 15px;
+}
+
+.info-Url {
+  font-size: 20px;
+  align-self: end;
 }

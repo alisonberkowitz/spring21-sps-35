@@ -4,13 +4,13 @@ let max = 1000000;
 let sessionsSet = new Set();
 
 // showPin
-let pinStr = document.querySelector(".pinStr");
+let pinStr = document.querySelector(".pinSection-Pin");
 
 function createPin() {
   pin = Math.floor(Math.random() * (max - min)) + min;
   sessionsSet.add(pin);
   //showPin();
-  setTimeout(showPin, 4000);
+  setTimeout(showPin, 3500);
 }
 
 function showPin() {
