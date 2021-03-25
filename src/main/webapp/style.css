@@ -1,9 +1,109 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+html, body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-#greeting-container {
-  margin-top: 20px;
+/* Number of question */
+.num_question{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.num_question #idNumQue{
+    width: 2%;
+    border: 2px solid black; 
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 20px;
+    padding:5px;
+    outline: none;
+    height: 20px;
+
+}
+
+.num_question input{
+    width: 20%;
+    border: 2px solid black; 
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 20px;
+    padding:5px;
+    outline: none;
+    height: 20px;
+}
+
+.num_question button{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Muli', sans-serif;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+}
+
+.num_question h1{
+  color: black;
+  font-weight: normal;
+  margin: 10px;
+  padding: 5px;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.num_question h2{
+  color: black;
+  font-weight: normal;
+  margin: 10px;
+  padding: 5px;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+/* Question create */
+.question_create p{
+  color: black;
+  font-weight: normal;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 40px;
+}
+
+.questions_create form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.questions_create input{
+    width: 20%;
+    border: 2px solid black; 
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 20px;
+    padding:5px;
+    outline: none;
+    height: 20px;
+}
+
+.questions_create .botonSubmit{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Muli', sans-serif;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
 }

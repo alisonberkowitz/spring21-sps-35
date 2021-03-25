@@ -7,7 +7,7 @@ function createQuestions(){
   var elementContainer = document.getElementById("idQuestions");
   
   for(let i = 0; i < numberQuestions; i++){
-    var inputQuestion = document.createElement("INPUT");
+    var inputQuestion = document.createElement("input");
     inputQuestion.setAttribute("type", "text");
     inputQuestion.setAttribute("name", "question");
     var h2ElementQuestion = document.createElement("h2");
@@ -31,15 +31,13 @@ function createQuestions(){
   elementContainer.appendChild(elementForm);
   var button = document.createElement('input');
   button.setAttribute('type', 'submit');
-  elementContainer.appendChild(button);
+  button.setAttribute("class", "botonSubmit");
+  elementForm.appendChild(button);
   button.onclick = () => {
     var inputs = document.getElementById("idForm").elements;
     for(let i = 0 ; i < 5; i++){
       console.log(inputs[i].value);
 
     }
-  }
-  
-  
-  
+  }  
 }
