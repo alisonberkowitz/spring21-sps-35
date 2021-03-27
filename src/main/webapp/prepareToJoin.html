@@ -8,10 +8,16 @@
   </head>
   <body>
     <div class="info">
-      <div class="info-mainTitle">Ready to join?</div>
+      <div class="info-mainTitle">Ready to join us?</div>
       <div class="info-pinSection">
-        <div class="pinSection-PinTitle">Game PIN:</div>
-        <div class="pinSection-Pin">Loading Game PIN</div>
+        <form action="/form-handler" method="POST">
+          <div class="pinSection-PinTitle">Game PIN:</div>
+          <div class="showPin">
+            <div class="pinSection-Loading">Loading Game PIN</div>
+            <div class="pinSection-Pin" name="pinNumber"></div>
+          </div>
+          <input class="formInfo-input" type="submit" />
+        </form>
       </div>
       <div>
         <div class="info-Url">Join at: www.quizsy.com</div>

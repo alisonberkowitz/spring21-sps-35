@@ -18,19 +18,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 800px;
-}
-
-.info-mainTitle {
-  color: white;
-  font-size: 60px;
+  height: 200px;
+  background-color: #65997d;
 }
 
 .info-pinSection {
-  padding-bottom: 100px;
-  border-radius: 5px;
-  align-items: center;
-  height: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .pinSection-PinTitle {
@@ -40,15 +34,15 @@ body {
   border: solid white;
   background-color: white;
   border-radius: 5px;
-  margin-left: 15px;
+  margin-left: 390px;
 }
 
-.showPin {
-  position: relative;
+.info-pinSection-content {
+  display: flex;
+  flex-direction: row;
 }
 
-.pinSection-Pin,
-.pinSection-Loading {
+.pinSection-Pin {
   font-size: 20px;
   border: solid white;
   background-color: white;
@@ -58,33 +52,29 @@ body {
   align-content: center;
   font-size: 40px;
   padding-left: 15px;
-  position: absolute;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
-.pinSection-Loading {
-  opacity: 1;
-}
-
-.pinSection-Pin {
-  opacity: 0;
+.info-Url-container {
+  display: flex;
+  text-justify: center;
 }
 
 .info-Url {
   font-size: 20px;
-  align-self: end;
-}
-
-.formInfo-input{
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    width: 100px;
-    position: relative;
-    margin-top: 65px;
-    height: 45px;
-}
-
-.formInfo-input:hover{
-    background-color: gray;
-    cursor: pointer;   
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  height: 60px;
+  width: 350px;
+  font-size: 30px;
+  padding-left: 15px;
+  clip-path: polygon(
+    calc(100% - 2.5vmin) 0px,
+    100% 50%,
+    calc(100% - 2.5vmin) 100%,
+    0px 100%,
+    0px 0px
+  );
 }
