@@ -1,0 +1,40 @@
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+#answers {
+  padding-top: 50%;
+  padding-bottom: 50%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 50%;
+}
+
+#diamond {
+  height: 100%;
+  width: 100%;
+}
+
+#square {
+  height: 100%;
+  width: 100%;
+}
+
+#triangle {
+  height: 100%;
+  width: 100%;
+}
+
+#circle {
+  height: 100%; 
+  width: 100%;
+}
