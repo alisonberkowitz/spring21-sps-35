@@ -1,0 +1,39 @@
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+#greeting-container {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 50%;
+}
+
+#diamond {
+  height: 100%;
+  width: 100%;
+}
+
+#square {
+  height: 100%;
+  width: 100%;
+}
+
+#triangle {
+  height: 100%;
+  width: 100%;
+}
+
+#circle {
+  height: 100%; 
+  width: 100%;
+}
