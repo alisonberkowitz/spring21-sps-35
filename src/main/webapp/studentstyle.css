@@ -1,14 +1,14 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+.titlebar {
+  margin-bottom: 20%;
 }
 
-#answers {
-  padding-top: 50%;
-  padding-bottom: 50%;
+.pin {
+  display:block; float: left
 }
 
+.question {
+  display:block; float: right
+}
 .row {
   display: flex;
 }
@@ -17,6 +17,16 @@
   flex: 50%;
   padding: 10px;
   height: 50%;
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+#answers {
+  align-items:center;
 }
 
 #diamond {
@@ -37,4 +47,9 @@
 #circle {
   height: 100%; 
   width: 100%;
+}
+
+hr {
+    border: 1px solid #777777;
+    width: 100%;
 }
