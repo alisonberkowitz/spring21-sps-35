@@ -1,40 +1,122 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+
+.pin {
+  display:block; float: left
 }
 
-#answers {
-  padding-top: 50%;
-  padding-bottom: 50%;
+.answers {
+  margin:auto;
 }
 
+.question {
+  display:block; float: right
+}
 .row {
   display: flex;
+  padding: 0.5%;
 }
 
 .column {
   flex: 50%;
-  padding: 10px;
-  height: 50%;
+  height: 38vh;
+  margin-right:1%;
+  text-align: center;
+  
 }
 
 #diamond {
   height: 100%;
-  width: 100%;
 }
 
 #square {
   height: 100%;
-  width: 100%;
 }
 
 #triangle {
   height: 100%;
-  width: 100%;
 }
 
 #circle {
   height: 100%; 
+}
+
+#diamondShape {
+  position: relative;
+  top:45%;
+  margin:auto;  
+  width: 30%;
+  height: 30%;
+  background: white;
+/* Rotate */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+/* Rotate Origin */
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  margin: 60px 0 10px 310px;
+}
+
+#squareShape {
+  position: relative;
+  top:45%;
+  margin:auto;
+  width: 10%;
+  height: 10%;
+  background: white;
+}
+
+#triangleShape {
+  position: relative;
+  top:45%;
+  margin:auto;  
+  width: 10%;
+  height: 10%;
+  
+}
+
+#circleShape {
+  align-self: center;
+  width: 20%;
+  height: 20%;
+  background: white;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 70%;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 70%;  
+}
+
+#diamondBackground {
+  background: #1368ce; 
+}
+
+#squareBackground {
+  background: #298f0d;
+}
+
+#triangleBackground {
+  background: #e21b3c;
+}
+
+#circleBackground {
+  background: #d89e00;
+  
+}
+
+hr {
+  border: 1px solid #777777;
   width: 100%;
+}
+
+img {
+  width: 30%;
+}
+
+body {
+    margin:5px;
 }
