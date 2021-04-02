@@ -15,14 +15,14 @@
 package com.google.sps.data;
 
 /** An item on a todo list. */
-public final class Pin {
+public final class SessPin {
 
-  private final int pin;
+  private final int sessPin;
   private final long timestamp;
 
 
-  public Pin(int pin, long timestamp) {
-    this.pin = pin;
+  public SessPin(int sessPin, long timestamp) {
+    this.sessPin = sessPin;
     this.timestamp = timestamp;
   }
 }

@@ -13,31 +13,31 @@ import javax.servlet.http.HttpServletResponse;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
-@WebServlet("/form-handler")
-public class PinHandlerServlet extends HttpServlet {
+@WebServlet("/form-sessPin-handler")  
+public class SessPinHandlerServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     // Get the value entered in the form.
     long timestamp = System.currentTimeMillis();
-    String pin = Jsoup.clean(request.getParameter("pinNumber"), Whitelist.none());
+    String sessPin = Jsoup.clean(request.getParameter("sessPinNumber"), Whitelist.none());
 
     // Print the value so you can see it in the server logs.
-    System.out.println("You submitted: " + pin);
+    System.out.println("The SessPin is: " + sessPin);
 
     // Write the value to the response so the user can see it.
-    response.getWriter().println("You submitted: " + pin);
+    response.getWriter().println("The sessPin is: " + sessPin);
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Pin");
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("SessPin");
     FullEntity pinEntity =
         Entity.newBuilder(keyFactory.newKey())
-            .set("name", pin)
+            .set("sessPin", sessPin)
             .set("timestamp", timestamp)
             .build();
     datastore.put(pinEntity);
-    response.sendRedirect("/homePage.html");
+
   }
 }

@@ -22,12 +22,12 @@ body {
   background-color: #65997d;
 }
 
-.info-pinSection {
+.info-sessPinSection {
   display: flex;
   flex-direction: column;
 }
 
-.pinSection-PinTitle {
+.sessPinSection-Title {
   font-size: 20px;
   border: solid;
   width: 100px;
@@ -37,12 +37,12 @@ body {
   margin-left: 390px;
 }
 
-.info-pinSection-content {
+.info-sessPinSection-content {
   display: flex;
   flex-direction: row;
 }
 
-.pinSection-Pin {
+.sessPinSection-Pin {
   font-size: 20px;
   border: solid white;
   background-color: white;

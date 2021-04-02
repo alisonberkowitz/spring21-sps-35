@@ -26,14 +26,14 @@ body {
   font-size: 60px;
 }
 
-.info-pinSection {
+.info-sessPinSection {
   padding-bottom: 100px;
   border-radius: 5px;
   align-items: center;
   height: 20px;
 }
 
-.pinSection-PinTitle {
+.sessPinSection-Title {
   font-size: 20px;
   border: solid;
   width: 100px;
@@ -43,12 +43,12 @@ body {
   margin-left: 15px;
 }
 
-.showPin {
+.showSessPin {
   position: relative;
 }
 
-.pinSection-Pin,
-.pinSection-Loading {
+.sessPinSection-Loading,
+.sessPinSection-Pin {
   font-size: 20px;
   border: solid white;
   background-color: white;
@@ -61,11 +61,11 @@ body {
   position: absolute;
 }
 
-.pinSection-Loading {
+.sessPinSection-Loading {
   opacity: 1;
 }
 
-.pinSection-Pin {
+.sessPinSection-Pin {
   opacity: 0;
 }
 
