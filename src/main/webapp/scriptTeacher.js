@@ -4,12 +4,15 @@ function createQuestions(){
   var numberQuestions = document.getElementById("idNumQue").value;
   var elementForm = document.createElement("form");
   elementForm.setAttribute("id","idForm");
+  elementForm.setAttribute("method","POST");
+  elementForm.setAttribute("action","/form-handler");
+  
   var elementContainer = document.getElementById("idQuestions");
   
   for(let i = 0; i < numberQuestions; i++){
     var inputQuestion = document.createElement("input");
     inputQuestion.setAttribute("type", "text");
-    inputQuestion.setAttribute("name", "question");
+    inputQuestion.setAttribute("name", `question${i}`);
     var h2ElementQuestion = document.createElement("h2");
     h2ElementQuestion.appendChild(document.createTextNode(`Please write question number ${i+1}`))
     elementForm.appendChild(h2ElementQuestion);
@@ -37,7 +40,6 @@ function createQuestions(){
     var inputs = document.getElementById("idForm").elements;
     for(let i = 0 ; i < 5; i++){
       console.log(inputs[i].value);
-
     }
   }  
 }

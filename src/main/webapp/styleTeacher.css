@@ -13,7 +13,7 @@ html, body{
 }
 
 .num_question #idNumQue{
-    width: 2%;
+    width: 50px;
     border: 2px solid black; 
     font-size: 16px;
     font-family: 'Muli', sans-serif;
@@ -67,7 +67,7 @@ html, body{
 }
 
 /* Question create */
-.question_create p{
+.storing-container p{
   color: black;
   font-weight: normal;
   margin-left: 10%;
@@ -77,14 +77,14 @@ html, body{
   line-height: 40px;
 }
 
-.questions_create form{
+.storing-container form{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column; 
 }
 
-.questions_create input{
+.storing-container input{
     width: 20%;
     border: 2px solid black; 
     font-size: 16px;
@@ -95,7 +95,7 @@ html, body{
     height: 20px;
 }
 
-.questions_create .botonSubmit{
+.storing-container .botonSubmit{
     background-color: rgba(0, 0, 0, 0.1);
     border: none;
     color: black;
