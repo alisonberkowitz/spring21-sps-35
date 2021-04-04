@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizsy</title>
+    <link rel="stylesheet" href="./prepareToJoin.css" />
+  </head>
+  <body>
+    <div class="info">
+        <div class="info-mainTitle">Ready to join?</div>
+        <div class="info-sessPinSection">
+            <form action="/form-sessPin-handler" method="POST">
+                <div class="sessPinSection-Title">Game PIN:</div>
+                <div class="showSessPin">
+                    <div class="sessPinSection-Loading">Loading Game PIN</div>
+                    <div class="sessPinSection-Pin"></div>
+                </div>
+                <input type="hidden"  id="hiddenPin" name="sessPinNumber" ></input>
+                <button class="formInfo-input" onclick="loadSessPin()"> Start Game! </button>
+            </form>
+        </div>
+      <div>
+        <div class="info-Url">Join at: www.quizsy.com</div>
+      </div>
+    </div>
+
+    <script src="/sessPin.js"></script>
+  </body>
+</html>
