@@ -62,7 +62,6 @@ function nextQuestion(answerChosen) {
         default:
           break;
     }
-    console.log("next Question: " + userChoice);
     //window.location.href = "student.html";
     localStorage.setItem('userChoice', userChoice);
     localStorage.setItem('questionNum', ++questionNum);
