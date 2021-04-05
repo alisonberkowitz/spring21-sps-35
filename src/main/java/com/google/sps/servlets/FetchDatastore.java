@@ -7,7 +7,9 @@ import com.google.cloud.datastore.Query;
 import com.google.cloud.datastore.QueryResults;
 import com.google.cloud.datastore.StructuredQuery.OrderBy;
 import com.google.gson.Gson;
-import com.google.sps.data.User;
+import com.google.sps.data.Question;
+import com.google.sps.data.Quiz;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,14 +26,17 @@ public class FetchDatastore extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     Query<Entity> query =
-        Query.newEntityQueryBuilder().setKind("User").setOrderBy(OrderBy.desc("timestamp")).build();
+        Query.newEntityQueryBuilder().setKind("Question").setOrderBy(OrderBy.desc("timestamp")).build();
     QueryResults<Entity> results = datastore.run(query);
 
-    List<User> users = new ArrayList<>();
+    List<Question> questions = new ArrayList<>();
+    List<Quiz> quizzes = new ArrayList<>();
+
     while (results.hasNext()) {
       Entity entity = results.next();
 
       long id = entity.getKey().getId();
+      long quizId = entity.getKey().getId();      
       String question = entity.getString("question");
       String answerOne = entity.getString("answerOne");
       String answerTwo = entity.getString("answerTwo");
@@ -39,13 +44,16 @@ public class FetchDatastore extends HttpServlet {
       String correctAnswer = entity.getString("correctAnswer");
       long timestamp = entity.getLong("timestamp");
 
-      User user = new User(id, question, answerOne, answerTwo, answerThree, correctAnswer, timestamp);
-      users.add(user);
+      Question questionOne = new Question(id, question, answerOne, answerTwo, answerThree, correctAnswer, timestamp);
+      questions.add(questionOne);
+
+      Quiz quizOne = new Quiz(quizId, questionOne, timestamp);
+      quizzes.add(quizOne);
     }
 
     Gson gson = new Gson();
 
     response.setContentType("application/json;");
-    response.getWriter().println(gson.toJson(users));
+    response.getWriter().println(gson.toJson(questions));
   }
 }
