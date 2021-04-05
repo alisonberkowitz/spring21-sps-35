@@ -11,15 +11,39 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 let questionNum = 1;
 var userChoice = 0;
+var correctAnswer = 3;
 var totalQuestions = 5;
 
 function loadStudent() {
-    window.location.href = "student.html";
+    var delay = 3000;
+
+    setTimeout(() => {  
+      
+      window.location.href = "student.html";
+
+    }, delay);
+}
+
+async function revealAnswer() {
+    userChoice = localStorage.getItem('userChoice');
+    console.log(userChoice);
+    setTimeout(() => {  
+      
+      if (userChoice == correctAnswer) {
+          window.location.href = "studentright.html";
+      } else {
+          window.location.href = "studentwrong.html";
+      }
+
+    }, 2000);
 }
 
 function nextQuestion(answerChosen) {
+    setTimeout(() => {  
+      
     userChoice = answerChosen;
     
     switch(answerChosen) {
@@ -38,8 +62,12 @@ function nextQuestion(answerChosen) {
         default:
           break;
     }
-
+    console.log("next Question: " + userChoice);
     //window.location.href = "student.html";
-    questionNum++;
-    document.getElementById('questionNum').innerHTML = questionNum + " of " + totalQuestions;
+    localStorage.setItem('userChoice', userChoice);
+    localStorage.setItem('questionNum', ++questionNum);
+    //document.getElementById('questionNum').innerHTML = questionNum + " of " + totalQuestions;
+    window.location.href = "studentloading.html";
+
+    }, 500)
 }
