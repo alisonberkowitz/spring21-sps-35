@@ -15,9 +15,11 @@
     <jetty.version>9.4.31.v20200723</jetty.version>
 
     <!-- Project-specific properties -->
+
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
     <googleCloudProjectId>spring21-sps-35</googleCloudProjectId>
   </properties>
+
 
   <dependencies>
     <!-- Java Servlets API -->

@@ -1,0 +1,90 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: -webkit-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -moz-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -ms-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -o-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  font-family: cursive;
+  height: 800px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 800px;
+}
+
+.info-mainTitle {
+  color: white;
+  font-size: 60px;
+}
+
+.info-sessPinSection {
+  padding-bottom: 100px;
+  border-radius: 5px;
+  align-items: center;
+  height: 20px;
+}
+
+.sessPinSection-Title {
+  font-size: 20px;
+  border: solid;
+  width: 100px;
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.showSessPin {
+  position: relative;
+}
+
+.sessPinSection-Loading,
+.sessPinSection-Pin {
+  font-size: 20px;
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  height: 60px;
+  width: 350px;
+  align-content: center;
+  font-size: 40px;
+  padding-left: 15px;
+  position: absolute;
+}
+
+.sessPinSection-Loading {
+  opacity: 1;
+}
+
+.sessPinSection-Pin {
+  opacity: 0;
+}
+
+.info-Url {
+  font-size: 20px;
+  align-self: end;
+}
+
+.formInfo-input{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    position: relative;
+    margin-top: 65px;
+    height: 45px;
+}
+
+.formInfo-input:hover{
+    background-color: gray;
+    cursor: pointer;   
+}
