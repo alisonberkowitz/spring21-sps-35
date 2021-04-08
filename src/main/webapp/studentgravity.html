@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Quizsy</title>
+    <link rel="stylesheet" href="studentstyle.css">
+    <script src="studentscript.js"></script>
+  </head>
+  <body> <!-- fix whitespace before going further -->
+    <div class = "titlebar">
+      <h1 class = "pin">
+      Pin: 000000
+      </h1>
+      <h1 class = "question" id = "questionNum">
+      1 of 5
+      </h1>
+      
+      <hr>
+    </div>
+
+    <div onload = "setup()">
+    <canvas id = "studentCanvas" width="400" height="300">
+    </canvas>    
+    <img class = "rotateImg" src = "images/ship1transparent.png"/>
+    </div>
+
+    <div class = "titlebar">
+      <hr>
+      <h1 class = "pin">
+      Name
+      </h1>
+      <h1 class = "question" id = "questionNum">
+      Score
+      </h1>
+    </div>
+  </body>
+</html>

@@ -1,4 +1,3 @@
-
 .pin {
   display:block; 
   float: left;
@@ -26,13 +25,30 @@
 }
 
 .centerText {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    color:white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+    
+}
+
+.answerText {
+  height: 0%;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotateImg {
+  -webkit-transform:rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 #diamond {
@@ -122,12 +138,12 @@
 
 #wrongScreen {
     background: #e21b3c;
-    text-decoration-color: white;
+    color:white;
 }
 
 #rightScreen {
     background: #298f0d;
-    text-decoration-color: white;
+    color:white;
 }
 
 hr {

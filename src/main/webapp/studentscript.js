@@ -17,6 +17,58 @@ var userChoice = 0;
 var correctAnswer = 3;
 var totalQuestions = 5;
 
+function loadUsers() {
+  fetch('/list-users').then(response => response.text()).then((questions) => {
+    const userListElement = document.getElementById('users-list');
+    questions.forEach((question) => {
+      userListElement.appendChild(createUserElement(question));
+    })
+  });
+}
+
+/** Creates an element that represents a user */
+function createUserElement(question) {
+  const questionElement = document.createElement('li');
+  questionElement.className = 'question';
+
+  const nameElement = document.createElement('span');
+  nameElement.innerText = question.name;    
+  
+  questionElement.appendChild(nameElement);
+  return questionElement;
+}
+
+async function retrieveData() {
+     
+  console.log("AAAAA");
+  const timeLog = await fetch('/list-users');
+  console.log("Time log object: " + timeLog);
+  
+  console.log("Inner text");
+  const innerText = await timeLog.question;
+  console.log(innerText);
+  
+}
+
+function setup() {
+    const canvas = document.querySelector('#studentCanvas');
+    if (!canvas.getContext) {
+        return;
+    }
+
+    // get the context
+    let ctx = canvas.getContext('2d');
+
+    // set fill and stroke styles
+    ctx.fillStyle = '#F0DB4F';
+    ctx.strokeStyle = 'red';
+
+    // draw a rectangle with fill and stroke
+    ctx.fillRect(50, 50, 150, 100);
+    ctx.strokeRect(50, 50, 150, 100);
+
+}
+
 function loadStudent() {
     var delay = 3000;
 
