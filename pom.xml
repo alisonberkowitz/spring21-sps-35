@@ -15,9 +15,11 @@
     <jetty.version>9.4.31.v20200723</jetty.version>
 
     <!-- Project-specific properties -->
+
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>spring21-sps-36</googleCloudProjectId>
+    <googleCloudProjectId>spring21-sps-35</googleCloudProjectId>
   </properties>
+
 
   <dependencies>
     <!-- Java Servlets API -->
@@ -37,6 +39,20 @@
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-annotations</artifactId>
       <version>${jetty.version}</version>
+    </dependency>
+
+    <!--Datastore-->
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-datastore</artifactId>
+        <version>1.104.0</version>
+    </dependency>
+  
+    <!--Jsoup-->
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.12.1</version>
     </dependency>
   </dependencies>
 

@@ -1,0 +1,80 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: -webkit-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -moz-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -ms-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -o-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  font-family: cursive;
+  height: 800px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  background-color: #65997d;
+}
+
+.info-sessPinSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.sessPinSection-Title {
+  font-size: 20px;
+  border: solid;
+  width: 100px;
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 390px;
+}
+
+.info-sessPinSection-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.sessPinSection-Pin {
+  font-size: 20px;
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  height: 60px;
+  width: 350px;
+  align-content: center;
+  font-size: 40px;
+  padding-left: 15px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.info-Url-container {
+  display: flex;
+  text-justify: center;
+}
+
+.info-Url {
+  font-size: 20px;
+  border: solid white;
+  background-color: white;
+  border-radius: 5px;
+  height: 60px;
+  width: 350px;
+  font-size: 30px;
+  padding-left: 15px;
+  clip-path: polygon(
+    calc(100% - 2.5vmin) 0px,
+    100% 50%,
+    calc(100% - 2.5vmin) 100%,
+    0px 100%,
+    0px 0px
+  );
+}
