@@ -12,7 +12,7 @@ function createQuestions(){
   for(let i = 0; i < numberQuestions; i++){
     var inputQuestion = document.createElement("input");
     inputQuestion.setAttribute("type", "text");
-    inputQuestion.setAttribute("name", `question${i}`);
+    inputQuestion.setAttribute("name", `question${i+1}`);
     var h2ElementQuestion = document.createElement("h2");
     h2ElementQuestion.appendChild(document.createTextNode(`Please write question number ${i+1}`))
     elementForm.appendChild(h2ElementQuestion);
@@ -27,7 +27,7 @@ function createQuestions(){
       elementForm.appendChild(pElementAnswer);
       var inputAnswer = document.createElement("input");
       inputAnswer.setAttribute("type", "text");
-      inputAnswer.setAttribute("name", "answer");
+      inputAnswer.setAttribute("name", `answer${i+1}${j+1}`);
       elementForm.appendChild(inputAnswer);
     }
   }
@@ -35,11 +35,23 @@ function createQuestions(){
   var button = document.createElement('input');
   button.setAttribute('type', 'submit');
   button.setAttribute("class", "botonSubmit");
+  button.setAttribute("id", "idbotonSubmit");
+  button.setAttribute("value", "Play");
   elementForm.appendChild(button);
-  button.onclick = () => {
+  
+    let quizzId;
+    let min = 1;
+    let max = 1000000;
+    let quizzIdSet = new Set();
+    quizzId = Math.floor(Math.random() * (max - min)) + min;
+    quizzIdSet.add(quizzId);
+    window.localStorage.setItem('quizzPinNumber_scriptTeacher', quizzId);
+
+
+  /* button.onclick = () => {
     var inputs = document.getElementById("idForm").elements;
     for(let i = 0 ; i < 5; i++){
       console.log(inputs[i].value);
     }
-  }  
+  }   */
 }
