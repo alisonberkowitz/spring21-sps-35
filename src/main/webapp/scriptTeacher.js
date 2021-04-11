@@ -38,15 +38,20 @@ function createQuestions(){
   button.setAttribute("id", "idbotonSubmit");
   button.setAttribute("value", "Play");
   elementForm.appendChild(button);
+
+  
   
     let quizzId;
     let min = 1;
     let max = 1000000;
-    let quizzIdSet = new Set();
+    //let quizzIdSet = new Set();
     quizzId = Math.floor(Math.random() * (max - min)) + min;
-    quizzIdSet.add(quizzId);
+    //quizzIdSet.add(quizzId);
     window.localStorage.setItem('quizzPinNumber_scriptTeacher', quizzId);
 
+    button.onclick = () => {
+        window.location.href = "prepareToJoin.html";
+  }  
 
   /* button.onclick = () => {
     var inputs = document.getElementById("idForm").elements;

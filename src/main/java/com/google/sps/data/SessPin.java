@@ -13,16 +13,28 @@
 // limitations under the License.
 
 package com.google.sps.data;
+//import java.util.HashMap; 
 
 /** An item on a todo list. */
 public final class SessPin {
 
+
   private final int sessPin;
+  private final int quizzId;
   private final long timestamp;
+  //HashMap<Integer, Integer> currentSessions = new HashMap<Integer, Integer>();
 
-
-  public SessPin(int sessPin, long timestamp) {
+  public SessPin(int sessPin, int quizzId, long timestamp) {
     this.sessPin = sessPin;
+    this.quizzId = quizzId;
     this.timestamp = timestamp;
+    //currentSessions.put(quizzId, sessPin);
+    //System.out.println("hashMap: " + currentSessions );
   }
+
+  
 }
+
+
+
+
