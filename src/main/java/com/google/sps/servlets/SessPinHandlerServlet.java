@@ -22,12 +22,15 @@ public class SessPinHandlerServlet extends HttpServlet {
     // Get the value entered in the form.
     long timestamp = System.currentTimeMillis();
     String sessPin = Jsoup.clean(request.getParameter("sessPinNumber"), Whitelist.none());
+    String quizzId = Jsoup.clean(request.getParameter("quizzIdNumber"), Whitelist.none());
 
     // Print the value so you can see it in the server logs.
     System.out.println("The SessPin is: " + sessPin);
+    System.out.println("The QuizzId is: " + quizzId);
 
     // Write the value to the response so the user can see it.
     response.getWriter().println("The sessPin is: " + sessPin);
+    response.getWriter().println("The QuizzId is: " + quizzId);
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
@@ -35,6 +38,7 @@ public class SessPinHandlerServlet extends HttpServlet {
     FullEntity pinEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("sessPin", sessPin)
+            .set("quizzId", quizzId)
             .set("timestamp", timestamp)
             .build();
     datastore.put(pinEntity);
