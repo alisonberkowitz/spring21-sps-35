@@ -16,6 +16,9 @@ let questionNum = 1;
 var userChoice = 0;
 var correctAnswer = 3;
 var totalQuestions = 5;
+var pin = 234567;
+//var pinText = "";
+var userName = "Test";
 
 function loadUsers() {
   fetch('/list-users').then(response => response.text()).then((questions) => {
@@ -50,10 +53,9 @@ async function retrieveData() {
   
 }
 
-function setup() {
-  
-    console.log("");
-
+function loadValues () {
+  //pin = localStorage.getItem('quizzPinNumber_scriptTeacher');
+  document.getElementById("pinValue").innerHTML = "Pin: " + pin;
 }
 
 function loadStudent() {
@@ -62,7 +64,7 @@ function loadStudent() {
     setTimeout(() => {  
       
       window.location.href = "student.html";
-
+      
     }, delay);
 }
 
