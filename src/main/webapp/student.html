@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>WebApp Name</title>
+    <title>Quizsy</title>
     <link rel="stylesheet" href="studentstyle.css">
     <script src="studentscript.js"></script>
   </head>
@@ -20,27 +20,27 @@
 
     <div class = "answers">
       <div class="row">
-        <div class="column" id = "triangleBackground">
+        <div class="column" id = "triangleBackground" onclick = "nextQuestion(1)">
           <!--<input type="image" src="images/RedTriangle.png" name="submitRed" id="triangle" onclick = "nextQuestion(1)" />-->
-          <!--<div id = "triangleShape"></div>-->
-          <img src = "images/RedTriangle.png"/>
+          <img src = "images/RedTriangle.png" />
+          <h1 class = "answerText"> Answer 1 </h1>
         </div>
-        <div class="column" id = "diamondBackground">
-          <!--<div id = "diamondShape"></div>  -->
+        <div class="column" id = "diamondBackground" onclick = "nextQuestion(2)">
           <img src = "images/BlueDiamond.png"/>
+          <h1 class = "answerText"> Answer 2 </h1>
           <!--<input type="image" src="images/BlueDiamond.png" name="submitBlue" id="diamond" onclick = "nextQuestion(2)" />-->
         </div>
       </div>
 
       <div class="row">
-        <div class="column" id = "circleBackground">
-          <!--<div id = "circleShape"></div>-->
+        <div class="column" id = "circleBackground" onclick = "nextQuestion(3)">
           <img src = "images/YellowCircle.png"/>
+          <h1 class = "answerText"> Answer 3 </h1>
           <!--<input type="image" src="images/YellowCircle.png" name="submitYellow" id="circle" onclick = "nextQuestion(3)" />-->
         </div>
-        <div class="column" id = "squareBackground">
-          <!--<div id = "squareShape"></div>-->
+        <div class="column" id = "squareBackground" onclick = "nextQuestion(4)">
           <img src = "images/GreenSquare.png"/>
+          <h1 class = "answerText"> Answer 4 </h1>
           <!--<input type="image" src="images/GreenSquare.png" name="submitGreen" id="square" onclick = "nextQuestion(4)" />-->
         </div>
       </div>

@@ -47,7 +47,7 @@ public class FetchDatastore extends HttpServlet {
       Question oneQuestion = new Question(id, question, answerOne, answerTwo, answerThree, correctAnswer, timestamp);
       questions.add(oneQuestion);
 
-      Quiz oneQuiz = new Quiz(quizId, oneQuestion, timestamp);
+      Quiz oneQuiz = new Quiz(quizId, questions, timestamp);
       quizzes.add(oneQuiz);
     }
 

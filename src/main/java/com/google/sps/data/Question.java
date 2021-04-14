@@ -12,6 +12,7 @@ public final class Question {
   private final long timestamp;
 
   public Question(long id, String question, String answerOne, String answerTwo, String answerThree, String correctAnswer, long timestamp) {
+    
     this.id = id;
     this.question = question;
     this.answerOne = answerOne;
