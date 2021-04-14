@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Quizsy</title>
-    <link rel="stylesheet" href="studentstyle.css">
+    <link rel="stylesheet" href="gravitystyle.css">
     <script src="studentscript.js"></script>
   </head>
   <body> <!-- fix whitespace before going further -->
     <div class = "titlebar">
       <h1 class = "pin">
-      Pin: 000000
+      Pin: 123456
       </h1>
       <h1 class = "question" id = "questionNum">
       1 of 5
@@ -19,9 +19,15 @@
     </div>
 
     <div onload = "setup()">
-    <canvas id = "studentCanvas" width="400" height="300">
-    </canvas>    
-    <img class = "rotateImg" src = "images/ship1transparent.png"/>
+    <div id = "studentCanvas" >
+        <div id = "asteroids">
+        <img id = "asteroid1" class = "asteroidImg" src = "images/asteroid1.png"/>
+        <img id = "asteroid2" class = "asteroidImg" src = "images/asteroid2.png"/>
+        <img id = "asteroid4" class = "asteroidImg" src = "images/asteroid4.png"/>
+        <img id = "asteroid3" class = "asteroidImg" src = "images/asteroid3.png"/>
+        </div>
+        <img class = "shipImg" src = "images/shipwhitetransparent.png"/>
+    </div>    
     </div>
 
     <div class = "titlebar">
