@@ -16,6 +16,9 @@ let questionNum = 1;
 var userChoice = 0;
 var correctAnswer = 3;
 var totalQuestions = 5;
+var pin = 234567;
+//var pinText = "";
+var userName = "Test";
 
 function loadUsers() {
   fetch('/list-users').then(response => response.text()).then((questions) => {
@@ -50,23 +53,9 @@ async function retrieveData() {
   
 }
 
-function setup() {
-    const canvas = document.querySelector('#studentCanvas');
-    if (!canvas.getContext) {
-        return;
-    }
-
-    // get the context
-    let ctx = canvas.getContext('2d');
-
-    // set fill and stroke styles
-    ctx.fillStyle = '#F0DB4F';
-    ctx.strokeStyle = 'red';
-
-    // draw a rectangle with fill and stroke
-    ctx.fillRect(50, 50, 150, 100);
-    ctx.strokeRect(50, 50, 150, 100);
-
+function loadValues () {
+  //pin = localStorage.getItem('quizzPinNumber_scriptTeacher');
+  document.getElementById("pinValue").innerHTML = "Pin: " + pin;
 }
 
 function loadStudent() {
@@ -75,7 +64,7 @@ function loadStudent() {
     setTimeout(() => {  
       
       window.location.href = "student.html";
-
+      
     }, delay);
 }
 

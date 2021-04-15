@@ -25,6 +25,7 @@
 }
 
 .centerText {
+    
   height: 100%;
   width: 100%;
   display: flex;
@@ -41,14 +42,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.rotateImg {
-  -webkit-transform:rotate(270deg);
-  -moz-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  transform: rotate(270deg);
 }
 
 #diamond {
@@ -157,4 +150,9 @@ img {
 
 body {
     margin:5px;
+    background: -webkit-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -moz-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -ms-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -o-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
 }

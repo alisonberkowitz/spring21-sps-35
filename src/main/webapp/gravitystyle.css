@@ -1,0 +1,86 @@
+.shipImg {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(.08);
+  width: 50%;
+}
+
+.asteroidImg {
+    display: block;
+}
+
+.row {
+  display: flex;
+  padding: 0.5%;
+}
+
+.column {
+  flex: 50%;
+  height: 38vh;
+  margin-right:1%;
+  text-align: center;
+  
+}
+
+.pin {
+  display:block; 
+  float: left;
+}
+
+.answers {
+  margin:auto;
+}
+
+.question {
+  display:block; 
+  float: right;
+}
+
+#studentCanvas {
+  background-image: url("images/spacebackground.png");
+  height: 75vh;
+}
+
+#asteroid1 {
+  transform: scale(.23);
+  float:left;  
+}
+
+#asteroid2 {
+  transform: scale(.25);  
+  float:left;
+}
+
+#asteroid3 {
+  transform: scale(.26);
+  position: absolute;
+  top: 25%;
+  right: 1%;  
+}
+
+#asteroid4 {
+  transform: scale(.26);
+}
+
+#asteroids {
+    width: 100%;
+    height:50%;
+    position: fixed;
+    align-items: center;
+}
+
+hr {
+  border: 1px solid #777777;
+  width: 100%;
+}
+
+body {
+  margin:5px;
+  background: -webkit-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -moz-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -ms-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -o-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+}
