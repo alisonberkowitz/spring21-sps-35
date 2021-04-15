@@ -44,16 +44,17 @@ public class FetchDatastore extends HttpServlet {
       String correctAnswer = entity.getString("correctAnswer");
       long timestamp = entity.getLong("timestamp");
 
-      Question questionOne = new Question(id, question, answerOne, answerTwo, answerThree, correctAnswer, timestamp);
-      questions.add(questionOne);
+      Question oneQuestion = new Question(id, question, answerOne, answerTwo, answerThree, correctAnswer, timestamp);
+      questions.add(oneQuestion);
 
-      Quiz quizOne = new Quiz(quizId, questionOne, timestamp);
-      quizzes.add(quizOne);
+      Quiz oneQuiz = new Quiz(quizId, questions, timestamp);
+      quizzes.add(oneQuiz);
     }
 
     Gson gson = new Gson();
 
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(questions));
+    response.getWriter().println(gson.toJson(quizzes));
   }
 }
