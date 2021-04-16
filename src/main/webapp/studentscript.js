@@ -18,6 +18,7 @@ var correctAnswer = 3;
 var totalQuestions = 5;
 var pin = 234567;
 //var pinText = "";
+var score = 0;
 var userName = "Test";
 
 function loadUsers() {
@@ -56,6 +57,8 @@ async function retrieveData() {
 function loadValues () {
   //pin = localStorage.getItem('quizzPinNumber_scriptTeacher');
   document.getElementById("pinValue").innerHTML = "Pin: " + pin;
+  score = localStorage.getItem('score');
+  document.getElementById("score").innerHTML = "Score: " + score;
 }
 
 function loadStudent() {
@@ -74,12 +77,14 @@ async function revealAnswer() {
     setTimeout(() => {  
       
       if (userChoice == correctAnswer) {
+          //score = score + 700;
           window.location.href = "studentright.html";
       } else {
           window.location.href = "studentwrong.html";
       }
 
     }, 2000);
+    localStorage.setItem('score', score);
 }
 
 function nextQuestion(answerChosen) {
@@ -105,7 +110,7 @@ function nextQuestion(answerChosen) {
     }
     //window.location.href = "student.html";
     localStorage.setItem('userChoice', userChoice);
-    localStorage.setItem('questionNum', ++questionNum);
+    //localStorage.setItem('questionNum', ++questionNum);
     //document.getElementById('questionNum').innerHTML = questionNum + " of " + totalQuestions;
     window.location.href = "studentloading.html";
 
