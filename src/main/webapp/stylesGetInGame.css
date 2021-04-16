@@ -49,10 +49,15 @@ body {
   color: gray;
   font-size: 16px;
   text-align: center;
+  justify-content: center;
   box-sizing: border-box;
   margin-bottom: 0.625rem;
 }
 
+.gameNickname-Nickname{
+    padding-top: 10px;
+    font-family: helvetica;
+}
 .sessPin-button,
 .gameNickname-button {
   background-color: black;

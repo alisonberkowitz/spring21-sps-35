@@ -9,11 +9,13 @@
   <body>
     <div class="gameNickname">
         <div class="gameNickname-mTitle">Quizsy</div>
-        <div class="gameNickname-container">
-            <input class="gameNickname-Nickname" placeholder="Nickname"></input>
-            <a href="student.html">
-                <button class="gameNickname-button">Go!</button>
-            </a>
+        <div class="gameNickname-container"> 
+            <form action="/form-playerName-handler" method="POST">
+                <textarea class="gameNickname-Nickname" name="gameNickname-input" placeholder="Nickname"></textarea>
+                
+                <input class="gameNickname-button" type="submit" value="Go!" href="student.html"/>
+                
+            </form>
         </div>
     </div>
   </body>
