@@ -4,8 +4,25 @@ html, body{
   scroll-behavior: smooth;
 }
 
+body {
+  background: -webkit-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -moz-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -ms-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: -o-linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  background: linear-gradient(90deg, #65997d 10%, #fccb6e 90%);
+  font-family: cursive;
+  height: 800px;
+}
+
 /* Number of question */
 .num_question{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.questionTeacherContainer{
   display: flex;
   align-items: center;
   justify-content: center;
