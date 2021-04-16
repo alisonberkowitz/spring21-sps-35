@@ -77,14 +77,14 @@ async function revealAnswer() {
     setTimeout(() => {  
       
       if (userChoice == correctAnswer) {
-          score = score + 700;
-          localStorage.setItem('score', score);
+          //score = score + 700;
           window.location.href = "studentright.html";
       } else {
           window.location.href = "studentwrong.html";
       }
 
     }, 2000);
+    localStorage.setItem('score', score);
 }
 
 function nextQuestion(answerChosen) {
