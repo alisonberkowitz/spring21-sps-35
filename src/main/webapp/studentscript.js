@@ -37,6 +37,9 @@ function updateScore() {
 
 function getScore() {
     score = localStorage.getItem('score');
+    if (score == null) {
+        score = 0;
+    }
     return score;
 }
 /** Creates an element that represents a user */
