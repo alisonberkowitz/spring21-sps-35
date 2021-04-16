@@ -1,6 +1,6 @@
 * {
   padding: 0px;
-  margin: 0px;
+  margin: auto;
 }
 
 body {
@@ -40,7 +40,8 @@ body {
   border: solid white;
   background-color: white;
   border-radius: 5px;
-  margin-left: 15px;
+  margin-left: 1px;
+  width: max-content;
 }
 
 .showSessPin {
@@ -58,15 +59,16 @@ body {
   align-content: center;
   font-size: 40px;
   padding-left: 15px;
-  position: absolute;
+  
 }
 
 .sessPinSection-Loading {
   opacity: 1;
+  position: absolute;
 }
 
 .sessPinSection-Pin {
-  opacity: 0;
+  opacity: 1;
 }
 
 .info-Url {
@@ -80,7 +82,6 @@ body {
     border-radius: 5px;
     width: 100px;
     position: relative;
-    margin-top: 65px;
     height: 45px;
 }
 
