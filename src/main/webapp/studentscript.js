@@ -30,6 +30,18 @@ function loadUsers() {
   });
 }
 
+function updateScore() {
+    score += 700;
+    localStorage.setItem('score', score);
+}
+
+function getScore() {
+    score = localStorage.getItem('score');
+    if (score == null) {
+        score = 0;
+    }
+    return score;
+}
 /** Creates an element that represents a user */
 function createUserElement(question) {
   const questionElement = document.createElement('li');
@@ -56,9 +68,11 @@ async function retrieveData() {
 
 function loadValues () {
   //pin = localStorage.getItem('quizzPinNumber_scriptTeacher');
-  document.getElementById("pinValue").innerHTML = "Pin: " + pin;
-  score = localStorage.getItem('score');
-  document.getElementById("score").innerHTML = "Score: " + score;
+  var userScore = 0;
+  userScore = getScore();
+  //document.getElementById("pinValue").innerHTML = "Pin: " + pin;
+  //score = localStorage.getItem('score');
+  document.getElementById("score").innerHTML = "Score: " + userScore;
 }
 
 function loadStudent() {
@@ -77,14 +91,13 @@ async function revealAnswer() {
     setTimeout(() => {  
       
       if (userChoice == correctAnswer) {
-          //score = score + 700;
+          updateScore();
           window.location.href = "studentright.html";
       } else {
           window.location.href = "studentwrong.html";
       }
 
     }, 2000);
-    localStorage.setItem('score', score);
 }
 
 function nextQuestion(answerChosen) {
